@@ -1,0 +1,27 @@
+[
+  {
+    "id": "REQ-001",
+    "expected_issue_type": "Task",
+    "requirement": "Users should be able to reset their password. The system should send an email containing a secure reset link. The reset link should expire after 30 minutes."
+  },
+  {
+    "id": "REQ-002",
+    "expected_issue_type": "Story",
+    "requirement": "The dashboard should display the user's five most recent orders."
+  },
+  {
+    "id": "REQ-003",
+    "expected_issue_type": "Bug",
+    "requirement": "Users are sometimes logged out when navigating from the dashboard to the profile page."
+  },
+  {
+    "id": "REQ-004",
+    "expected_issue_type": "Story",
+    "requirement": "Administrators should be able to export user data as a CSV file."
+  },
+  {
+    "id": "REQ-005",
+    "expected_issue_type": "Story",
+    "requirement": "The checkout page should allow customers to apply a discount code."
+  }
+]

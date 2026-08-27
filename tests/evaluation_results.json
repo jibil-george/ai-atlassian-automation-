@@ -1,0 +1,123 @@
+{
+  "summary": {
+    "total_requirements": 5,
+    "successful": 5,
+    "failed": 0,
+    "structured_output_success_rate": 100.0,
+    "issue_type_accuracy": 80.0,
+    "grounding_accuracy": 80.0
+  },
+  "results": [
+    {
+      "id": "REQ-001",
+      "requirement": "Users should be able to reset their password. The system should send an email containing a secure reset link. The reset link should expire after 30 minutes.",
+      "expected_issue_type": "Task",
+      "generation_success": true,
+      "issue_type": "Story",
+      "issue_type_correct": false,
+      "priority": "High",
+      "summary": "Implement user password reset functionality",
+      "acceptance_criteria": [
+        "Users can initiate a password reset request",
+        "A secure reset link is sent via email",
+        "The reset link expires 30 minutes after generation"
+      ],
+      "labels": [
+        "authentication",
+        "password-reset",
+        "security"
+      ],
+      "grounded": true,
+      "unsupported_items": [],
+      "grounding_error": null
+    },
+    {
+      "id": "REQ-002",
+      "requirement": "The dashboard should display the user's five most recent orders.",
+      "expected_issue_type": "Story",
+      "generation_success": true,
+      "issue_type": "Story",
+      "issue_type_correct": true,
+      "priority": "Medium",
+      "summary": "Display user's five most recent orders on the dashboard",
+      "acceptance_criteria": [
+        "The dashboard shows a list of the user's orders.",
+        "The list is limited to the five most recent orders."
+      ],
+      "labels": [
+        "dashboard",
+        "orders"
+      ],
+      "grounded": true,
+      "unsupported_items": [],
+      "grounding_error": null
+    },
+    {
+      "id": "REQ-003",
+      "requirement": "Users are sometimes logged out when navigating from the dashboard to the profile page.",
+      "expected_issue_type": "Bug",
+      "generation_success": true,
+      "issue_type": "Bug",
+      "issue_type_correct": true,
+      "priority": "High",
+      "summary": "Fix unexpected logout when navigating from dashboard to profile page",
+      "acceptance_criteria": [
+        "User remains logged in when navigating from the dashboard to the profile page."
+      ],
+      "labels": [
+        "authentication",
+        "navigation",
+        "session-management"
+      ],
+      "grounded": true,
+      "unsupported_items": [],
+      "grounding_error": null
+    },
+    {
+      "id": "REQ-004",
+      "requirement": "Administrators should be able to export user data as a CSV file.",
+      "expected_issue_type": "Story",
+      "generation_success": true,
+      "issue_type": "Story",
+      "issue_type_correct": true,
+      "priority": "Medium",
+      "summary": "Enable CSV export functionality for user data",
+      "acceptance_criteria": [
+        "Administrators can trigger an export of user data.",
+        "The exported file is provided in CSV format."
+      ],
+      "labels": [
+        "admin",
+        "export",
+        "user-data"
+      ],
+      "grounded": true,
+      "unsupported_items": [],
+      "grounding_error": null
+    },
+    {
+      "id": "REQ-005",
+      "requirement": "The checkout page should allow customers to apply a discount code.",
+      "expected_issue_type": "Story",
+      "generation_success": true,
+      "issue_type": "Story",
+      "issue_type_correct": true,
+      "priority": "Medium",
+      "summary": "Add discount code application to checkout page",
+      "acceptance_criteria": [
+        "Discount code field is present on the checkout page",
+        "Users can enter a discount code",
+        "The system allows the discount code to be applied"
+      ],
+      "labels": [
+        "checkout",
+        "discounts"
+      ],
+      "grounded": false,
+      "unsupported_items": [
+        "Discount code field is present on the checkout page"
+      ],
+      "grounding_error": null
+    }
+  ]
+}
