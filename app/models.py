@@ -1,3 +1,4 @@
+from enum import Enum
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -42,3 +43,41 @@ class TicketGenerationRequest(BaseModel):
 class GroundingEvaluation(BaseModel):
     grounded: bool
     unsupported_items: list[str]
+
+
+class DraftStatus(str, Enum):
+    DRAFT = "DRAFT"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    CREATED = "CREATED"
+
+
+class TicketDraft(BaseModel):
+    draft_id: str
+    status: DraftStatus
+    ticket: JiraTicket
+    jira_key: str | None = None
+    jira_url: str | None = None
+
+
+class TicketUpdateRequest(BaseModel):
+    summary: str | None = None
+
+    issue_type: Literal[
+        "Task",
+        "Bug",
+        "Story",
+        "Improvement"
+    ] | None = None
+
+    description: str | None = None
+
+    acceptance_criteria: list[str] | None = None
+
+    priority: Literal[
+        "Low",
+        "Medium",
+        "High"
+    ] | None = None
+
+    labels: list[str] | None = None
